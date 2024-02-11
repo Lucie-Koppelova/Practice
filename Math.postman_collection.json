@@ -1,0 +1,1107 @@
+{
+	"info": {
+		"_postman_id": "5eaced9c-f478-41a8-90e8-d90abc91f2b3",
+		"name": "Math",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30501824"
+	},
+	"item": [
+		{
+			"name": "Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=1&b=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Max safe integer + 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=9007199254740991&b=1",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "9007199254740991"
+						},
+						{
+							"key": "b",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Max safe integer + 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=9007199254740991&b=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "9007199254740991"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Max safe integer + 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=9007199254740991&b=5",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "9007199254740991"
+						},
+						{
+							"key": "b",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Max integer value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=1.7976931348623157e309&b=10",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1.7976931348623157e309"
+						},
+						{
+							"key": "b",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 parameters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=1&c=2&b=10",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1"
+						},
+						{
+							"key": "c",
+							"value": "2"
+						},
+						{
+							"key": "b",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2x param a, 2x param b",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=2&b=2&a=5&b=10",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "2"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						},
+						{
+							"key": "a",
+							"value": "5"
+						},
+						{
+							"key": "b",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only one parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"x\" & \"y\" parameters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?x=2&y=10",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "x",
+							"value": "2"
+						},
+						{
+							"key": "y",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing variable value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=1&b=",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1"
+						},
+						{
+							"key": "b",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Negative numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=-10&b=-2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "-10"
+						},
+						{
+							"key": "b",
+							"value": "-2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Negative + positive numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=-1&b=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "-1"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+ In front of the number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=+1&b=+2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "+1"
+						},
+						{
+							"key": "b",
+							"value": "+2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Large numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=2000000&b=3000000",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "2000000"
+						},
+						{
+							"key": "b",
+							"value": "3000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Both values have 38 digits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=89625435871458965234551847965954578822&b=61535435871458965234551847965954578822",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "89625435871458965234551847965954578822"
+						},
+						{
+							"key": "b",
+							"value": "61535435871458965234551847965954578822"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One value has 38 digits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=51535435204458965234551847965954578822&b=2000",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "51535435204458965234551847965954578822"
+						},
+						{
+							"key": "b",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value contains caret",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=10^10&b=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "10^10"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value contains caret written as \"**\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=10**10&b=2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "10**10"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Space between numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20 1&b=40 3",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20 1"
+						},
+						{
+							"key": "b",
+							"value": "40 3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=50&b=0",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "50"
+						},
+						{
+							"key": "b",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Both values 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=0&b=0",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "0"
+						},
+						{
+							"key": "b",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value starting 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=00050&b=00060",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "00050"
+						},
+						{
+							"key": "b",
+							"value": "00060"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Both values +",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=+&b=+",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "+"
+						},
+						{
+							"key": "b",
+							"value": "+"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal number divided by \",\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20&b=0,2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20"
+						},
+						{
+							"key": "b",
+							"value": "0,2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal number divided by \".\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20&b=0.2",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20"
+						},
+						{
+							"key": "b",
+							"value": "0.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal numbers rounding",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20.1634874103&b=14.6029535549",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20.1634874103"
+						},
+						{
+							"key": "b",
+							"value": "14.6029535549"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Letters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=x&b=y",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "x"
+						},
+						{
+							"key": "b",
+							"value": "y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "%number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20&b=%20",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20"
+						},
+						{
+							"key": "b",
+							"value": "%20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "%number(space)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20&b=%5 ",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20"
+						},
+						{
+							"key": "b",
+							"value": "%5 "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(space)number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/api/math/add?a=20&b= 20",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "20"
+						},
+						{
+							"key": "b",
+							"value": " 20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base URL",
+			"value": "https://czechitas-api.vercel.app",
+			"type": "string"
+		}
+	]
+}

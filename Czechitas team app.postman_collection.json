@@ -1,0 +1,801 @@
+{
+	"info": {
+		"_postman_id": "523b268b-8a38-4178-991d-91ee9940d82c",
+		"name": "Czechitas team app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30501824"
+	},
+	"item": [
+		{
+			"name": "Register new user with role Parent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"email\": \"automation+{{$timestamp}}@gmail.com\",\r\n  \"password\": \"Mnaumnau1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/register",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register new user with role Parent - mail without @",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"email\": \"rolnickagmail.com\",\r\n  \"password\": \"Mnaumnau1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/register",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register new user with role Parent - no password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"email\": \"automation+{{$timestamp}}@gmail.com\",\r\n  \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/register",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register new user with role Parent - no name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"email\": \"automation+{{$timestamp}}@gmail.com\",\r\n  \"password\": \"Mnaumnau1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/register",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get current logged in user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|ddAsSDgKcGCA70rDohvPcc711rVbj2EKF2asccDJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/current",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blocked user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|ddAsSDgKcGCA70rDohvPcc711rVbj2EKF2asccDJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/current",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get current logged in user Master Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "27|gUr7q3gHwfENnd0u3IPqP5ovLa7AckAJtpkogbth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/current",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get current logged in user Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "28|S1o027iUYbOzcoznuWPDiEqxgHBq7iCreL2u2qpB",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/users/current",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all terms - authentication Parent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|ddAsSDgKcGCA70rDohvPcc711rVbj2EKF2asccDJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms?page=1&perpage=50",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perpage",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all terms - authentication Master Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "38|sk0s3uNDgtJwzQCqegQdOeOmlHO9ZaEJY0UoW5ku",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms?page=1&perpage=50",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perpage",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all terms - authentication Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "39|yZmA50fs0Vi1qFP80OOAQVWeKyWGKKGLrkIj4ZWz",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms?page=1&perpage=50",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perpage",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new term - Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76|y8CF8BH0gZK46zTk2OyAz7YGKxERysLwU5Jykcck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category_id\": 4,\r\n  \"start\": \"2023-11-14\",\r\n  \"end\": \"2023-12-03\",\r\n  \"price\": 90000,\r\n  \"opening\": \"2021-01-30T12:34:56+02:00\",\r\n  \"note_public\": \"Bude to sranda.\",\r\n  \"note_private\": \"Nebude to sranda.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get term ID - Parent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|ddAsSDgKcGCA70rDohvPcc711rVbj2EKF2asccDJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get term ID - Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "91|46FVeL5JRQlcghreXER0w7YKG43bhUFoODjvukjy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get term ID - Master Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76|y8CF8BH0gZK46zTk2OyAz7YGKxERysLwU5Jykcck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update term - Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "96|Oksr9gXGQgs7lcilaJ5pD0jUDP76AyjkT4fhGLGj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category_id\": 4,\r\n  \"start\": \"2023-11-14\",\r\n  \"end\": \"2023-12-03\",\r\n  \"price\": 80000,\r\n  \"opening\": \"2021-01-30T12:34:56+02:00\",\r\n  \"note_public\": \"Bude to sranda.\",\r\n  \"note_private\": \"Nebude to sranda.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update term - Parent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|ddAsSDgKcGCA70rDohvPcc711rVbj2EKF2asccDJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category_id\": 4,\r\n  \"start\": \"2023-11-14\",\r\n  \"end\": \"2023-12-03\",\r\n  \"price\": 70000,\r\n  \"opening\": \"2021-01-30T12:34:56+02:00\",\r\n  \"note_public\": \"Bude to sranda.\",\r\n  \"note_private\": \"Nebude to sranda.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update term - Master Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "99|ViahzukRFX2f2mlxPRNXO76qgbIZQZTmCoetMakd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category_id\": 4,\r\n  \"start\": \"2023-11-14\",\r\n  \"end\": \"2023-12-03\",\r\n  \"price\": 70000,\r\n  \"opening\": \"2021-01-30T12:34:56+02:00\",\r\n  \"note_public\": \"Bude to sranda.\",\r\n  \"note_private\": \"Nebude to sranda.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Term - Master Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "101|GclipKQ4QYke2I4H2uvwflolBvK7jE8V2eYOm81b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/api/terms/28",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"api",
+						"terms",
+						"28"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base URL",
+			"value": "https://datop23-testing-your-patience-37c59cc436d3.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
